@@ -1,0 +1,64 @@
+<% include layout %>
+
+<a href="/"><button class="btn btn-primary">Home</button></a>
+<br>
+<br>
+<a href="/users/"><button class="btn btn-primary">Users</button></a>
+<section name="content">
+    <div class="container">
+
+            <% if (typeof message != 'undefined' && message) { %>
+                <div class="alert alert-info role='alert'">
+                <%= message %>
+            </div>
+                <% } %>
+<form class="form-horizontal" role="form" method="post" action="/users/register">
+   <br> 
+    <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Index</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="index" name="index" placeholder="Index">
+            </div>
+        </div>
+
+        <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">Group</label>
+                <div class="col-sm-10">
+                    <select name="role" class="form-control">
+                        <option value="">Select Group</option>
+                        <option value="2">Group 1</option>
+                        <option value="3">Group 2</option>
+                        </select>
+                </div>
+            </div>
+
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Full Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <input id="submit" name="submit" type="submit" value="Register" class="btn btn-primary">
+        </div>
+    </div>
+    
+</form>
+    </div>
+    </section>
